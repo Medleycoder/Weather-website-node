@@ -17,6 +17,10 @@ const partialsPath = path.join(__dirname,'../templates/partials')
 
 //LOADING EXPRESS TO CONST//
 const app = express()
+
+//For HEROKU//
+const port = process.env.PORT || 3000
+
 //SETTING HSB TO BE USE BY TEMPLATE ENGINE//
 app.set('view engine', 'hbs')
 app.set('views',viewsPath)
@@ -99,6 +103,6 @@ app.get('*',(req,res)=>{
 })
 
 //SERVER//
-app.listen(3000, ()=>{
-    console.log("Server is up baby")
+app.listen(port, ()=>{
+    console.log("Server is up baby at "+ port)
 })

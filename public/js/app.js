@@ -20,7 +20,7 @@ weatherFormEl.addEventListener('submit',(e)=>{
     if(!location){
        return messageGeoEl.textContent = 'Input field must be filled'
     }
-  fetch('http://localhost:3000/weather?address='+location).then((response)=>{
+  fetch('/weather?address='+location).then((response)=>{
     response.json().then((data)=>{
          if(data.error){
             messageGeoEl.textContent = data.error
