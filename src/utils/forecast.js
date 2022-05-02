@@ -10,7 +10,7 @@ const forecast = (latitide,longitude,callback)=>{
         }else if(body.error){
             callback('No such coordinates found',undefined)
         }else{
-            callback(undefined,'The temperature of '+ body.location.region+','+body.location.country +'!!! is '+ body.current.temperature +' F , But feels like ' + body.current.feelslike +' F' + 'The weather description is '+ body.current.weather_descriptions + ' and the humidity level is of '+ body.current.humidity) +' %'
+            callback(undefined,'The temperature of '+ body.location.region+','+body.location.country +'!!! is '+ body.current.temperature +' F , But feels like ' + body.current.feelslike +' F' + 'The weather description is '+ body.current.weather_descriptions + ' and the humidity level is of '+ body.current.humidity) +' %' + '. I love the forzen '
         }
     })
 }
